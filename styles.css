@@ -86,10 +86,41 @@ a {
 
 #project {
   grid-area: project;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.subtitle {
+  font-size: 2.5em;
+}
+
+.project__description {
+  max-width: 60%;
 }
 
 #about {
   grid-area: about;
+  background-color: #000;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.description__container {
+  width: 70%;
+  display: flex;
+  align-items: center;
+}
+
+.about__photo {
+  flex-grow: 3;
+}
+
+.description {
+  width: 80%;
 }
 
 #signup {
