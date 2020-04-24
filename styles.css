@@ -132,9 +132,72 @@ a {
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
 }
+
+#signup > p {
+  font-size: 1.3em;
+}
+
+#form {
+  display: inherit;
+  flex-direction: column;
+  align-items: center;
+}
+
+#email {
+  padding: .2em .8em;
+  width: 14em;
+  font-size: 1em;
+  height: 1.5em;
+  border-radius: 8px;
+}
+
+#email:focus{
+  box-shadow: 1px 1px 6px #6851ff;
+}
+
+#email:required{
+  border: 0;
+  outline: 0;
+}
+
+/*#email:invalid {
+  box-shadow: 1px 1px 10px red,
+              1px 1px 10px #e87815;
+  animation: .5s linear infinite alternate change_box_shadow;
+  border: none;
+}*/
+
+/*@keyframes change_box_shadow {
+  from {
+    box-shadow: 1px 1px 20px #e87815,
+              1px 1px 20px #ff3c00;
+  },
+  50% {
+    box-shadow: 1px 1px 20px #ff3c00,
+              1px 1px 20px #ff5400;
+  },
+  to {
+    box-shadow: 1px 1px 20px #ff7800,
+              1px 1px 20px #ffbf00;
+  }
+}*/
 
 #submit {
   display: block;
   cursor: pointer;
+  margin-top: 1.5em;
+  border: 0;
+  padding: .8em 1.3em;
+  box-shadow: 0.2em .2em 0.6em #9b9b9b;
+  font-weight: bold;
+  border-radius: .8em;
+  background: linear-gradient(to bottom right, #6851FF 35%, 50%, #00C988) text;
+  color: transparent;
+  transition: 1s background;
+}
+
+#submit:hover {
+  background: linear-gradient(to top right, #6851FF 35%, 50%, #00C988) text;
 }
