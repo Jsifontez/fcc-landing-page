@@ -6,14 +6,14 @@ body, html {
 
 body {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 3fr 1fr;
   grid-template-rows: repeat(4, auto) 60px;
   align-items: center;
   grid-template-areas:
     "home home home"
     "project project project"
     "about about about"
-    "signup signup signup"
+    ". signup ."
     "footer footer footer";
 }
 
@@ -101,7 +101,7 @@ a {
 
 #about {
   grid-area: about;
-  background: linear-gradient(to bottom, #000 80%, #fff 80%);
+  background: linear-gradient(to bottom, #000 85%, #fff 90%);
   color: #fff;
   display: flex;
   flex-direction: column;
@@ -133,10 +133,12 @@ a {
   flex-direction: column;
   align-items: center;
   text-align: center;
+  height: 400px;
 }
 
 #signup > p {
   font-size: 1.3em;
+  width: 80%;
 }
 
 #form {
@@ -205,4 +207,15 @@ a {
 
 #submit:hover {
   background: linear-gradient(to top right, #6851FF 35%, 50%, #00C988) text;
+}
+
+#footer {
+  grid-area: footer;
+  background-color: #ececec;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: .9em;
 }
