@@ -147,10 +147,11 @@ a {
 
 #email {
   padding: .2em .8em;
-  width: 14em;
+  width: 20em;
   font-size: 1em;
   height: 1.5em;
   border-radius: 8px;
+  background-color: #ececec;
 }
 
 #email:focus{
@@ -160,6 +161,10 @@ a {
 #email:required{
   border: 0;
   outline: 0;
+}
+
+#email::placeholder {
+  font-weight: bold;
 }
 
 /*#email:invalid {
