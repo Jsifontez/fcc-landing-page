@@ -61,6 +61,12 @@ section {
   font-size: 4em;
 }
 
+.title__gradient {
+  background: linear-gradient(#2a0fd5, 44%,#05ffae);
+  background-clip: text;
+  color: transparent;
+}
+
 .home__description {
   width: 33%;
   display: inherit;
@@ -96,6 +102,9 @@ a {
 
 .subtitle {
   font-size: 2.5em;
+  background: linear-gradient(to right, #0f6fd5, 44%,#05ffae);
+  background-clip: text;
+  color: transparent;
 }
 
 .project__description {
