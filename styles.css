@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Lora:wght@400;700&display=swap');
+
 body, html {
   background-color: white;
   margin: 0;
@@ -15,6 +17,7 @@ body {
     "about about about"
     ". signup ."
     "footer footer footer";
+  font-family: 'Lora', serif;
 }
 
 section {
@@ -48,7 +51,6 @@ section {
 
 #home {
   grid-area: home;
-  justify-self: center;
   color: #FFF;
   background-color: #000;
   display: flex;
@@ -59,6 +61,7 @@ section {
 .home__title{
   text-align: center;
   font-size: 4em;
+  font-family: 'Bree Serif', serif;
 }
 
 .title__gradient {
@@ -67,11 +70,21 @@ section {
   color: transparent;
 }
 
+#home > h3 {
+  font-size: 1.7em;
+  margin-top: 0;
+}
+
 .home__description {
-  width: 33%;
+  width: 40%;
   display: inherit;
   flex-direction: column;
-  justify-content: center;
+  text-align: justify;
+  font-size: 1.2em;
+}
+
+.home__description > p {
+  margin-top: 0;
 }
 
 a {
@@ -88,7 +101,7 @@ a {
   text-align: center;
   align-self: center;
   border-radius: 10px;
-  margin-bottom: 3em;
+  margin: 1.5em 0;
 }
 
 #project {
@@ -101,14 +114,17 @@ a {
 }
 
 .subtitle {
-  font-size: 2.5em;
+  font-size: 2.8em;
   background: linear-gradient(to right, #0f6fd5, 44%,#05ffae);
   background-clip: text;
   color: transparent;
+  font-family: 'Bree Serif', serif;
 }
 
 .project__description {
   max-width: 60%;
+  font-size: 1.25em;
+  text-align: justify;
 }
 
 .diveces {
@@ -152,6 +168,7 @@ img{
   width: 70%;
   display: flex;
   align-items: center;
+  font-size: 1.15em;
 }
 
 .avatar {
@@ -249,11 +266,12 @@ img{
   border-radius: .8em;
   background: linear-gradient(to bottom right, #6851FF 35%, 50%, #00C988) text;
   color: transparent;
-  transition: 1s background;
+  font-size: 1em;
+  transition: .4s;
 }
 
 #submit:hover {
-  background: linear-gradient(to top right, #6851FF 35%, 50%, #00C988) text;
+  box-shadow: 0 0 0.6em .3em #6851FF;
 }
 
 #footer {
