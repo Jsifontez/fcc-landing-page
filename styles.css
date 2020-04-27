@@ -154,8 +154,15 @@ img{
   align-items: center;
 }
 
-.about__photo {
-  flex-grow: 3;
+.avatar {
+  mix-blend-mode: overlay;
+}
+
+.avatar__container {
+  width: 30%;
+  margin-right: 20px;
+  background-image: radial-gradient(circle at top right, #6851FF, #00C988 90%);
+  border-radius: 20px;
 }
 
 .video__container {
@@ -163,7 +170,8 @@ img{
 }
 
 .description {
-  width: 80%;
+  width: 60%;
+  text-align: justify;
 }
 
 #signup {
