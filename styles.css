@@ -7,9 +7,9 @@ body, html {
 }
 
 :root {
-  --primary-color: #6851FF;
-  --secondary-color: #00C988;
-  --bg-color: #000;
+  --primary-color: hsl(211, 87%, 45%);
+  --secondary-color: hsl(161, 100%, 39%);
+  --bg-color: hsl(315, 99%, 37%);
   --text-color: #FFF;
   --font-size: 1.2em;
   --intro-width: 40%;
@@ -17,8 +17,9 @@ body, html {
   --about-description-width: 70%;
   --title-font-size: 4em;
   --subtitle-font-size: 2.8em;
-
-
+  --footer-bg-color: hsl(315, 99%, 90%);
+  --gradient-start: hsl(211, 87%, 60%);
+  --gradient-end: hsl(161, 100%, 51%);
 }
 
 body {
@@ -79,15 +80,13 @@ section {
 }
 
 .home__title{
-  --primary-color: #2a0fd5;
-  --secondary-color: #05ffae;
   text-align: center;
   font-size: var(--title-font-size);
   font-family: 'Bree Serif', serif;
 }
 
 .title__gradient {
-  background: linear-gradient(var(--primary-color), 44%,var(--secondary-color));
+  background: linear-gradient(to right, var(--gradient-start), 40%,var(--gradient-end));
   background-clip: text;
   color: transparent;
 }
@@ -134,13 +133,15 @@ a {
 }
 
 .subtitle {
-  --primary-color: #0f6fd5;
-  --secondary-color: #05ffae;
   font-size: var(--subtitle-font-size);
-  background: linear-gradient(to right, var(--primary-color), 44%, var(--secondary-color));
+  background: linear-gradient(to right, var(--gradient-start), 40%, var(--gradient-end));
   background-clip: text;
   color: transparent;
   font-family: 'Bree Serif', serif;
+}
+
+section:nth-child(odd) {
+  --gradient-end: hsl(161, 100%, 44%);
 }
 
 .project__description {
@@ -178,12 +179,12 @@ img{
 }
 
 #about {
-  color: var(--text-color);
   display: flex;
   grid-area: about;
   align-items: center;
   flex-direction: column;
   justify-content: center;
+  color: var(--text-color);
   background: linear-gradient(to bottom, var(--bg-color) 85%, var(--text-color) 90%);
 }
 
@@ -195,14 +196,16 @@ img{
 }
 
 .avatar {
+  border-radius: 1.25em; /*20px*/
   mix-blend-mode: overlay;
 }
 
 .avatar__container {
   width: 30%;
-  margin-right: 20px;
+  height: 284px;
+  margin-right: 1.25em; /*20px*/
   background-image: radial-gradient(circle at top right, var(--primary-color), var(--secondary-color) 90%);
-  border-radius: 20px;
+  border-radius: 1.25em; /*20px*/
 }
 
 .video__container {
@@ -293,12 +296,12 @@ img{
 }
 
 #submit:hover {
-  box-shadow: 0 0 0.6em .3em var(--primary-color);
+  box-shadow: 0 0 0.6em .1em var(--primary-color);
 }
 
 #footer {
   grid-area: footer;
-  background-color: #ececec;
+  background-color: var(--footer-bg-color);
   height: 100%;
   display: flex;
   flex-direction: column;
