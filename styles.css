@@ -41,6 +41,10 @@ section {
   width: 100%;
 }
 
+section:nth-child(odd) {
+  --gradient-end: hsl(161, 100%, 44%);
+}
+
 #header {
   box-sizing: content-box;
   height: 60px;
@@ -68,6 +72,23 @@ section {
 
 .nav-link {
   margin: 0 5px;
+  font-weight: bold;
+  color: white;
+}
+
+.nav-link:hover {
+  color: transparent;
+  background: linear-gradient(to left, var(--gradient-end), var(--gradient-start));
+  background-clip: text;
+}
+
+.nav-link:focus{
+  outline: 2px dashed var(--primary-color);
+}
+
+.nav-link:visited{
+  --secondary-color: hsl(161, 100%, 80%);
+  color: var(--secondary-color);
 }
 
 #home {
@@ -138,10 +159,6 @@ a {
   background-clip: text;
   color: transparent;
   font-family: 'Bree Serif', serif;
-}
-
-section:nth-child(odd) {
-  --gradient-end: hsl(161, 100%, 44%);
 }
 
 .project__description {
