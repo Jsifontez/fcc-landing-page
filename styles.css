@@ -205,6 +205,64 @@ img{
   background: linear-gradient(to bottom, var(--bg-color) 85%, var(--text-color) 90%);
 }
 
+.link {
+  --primary-color: hsl(211, 87%, 75%);
+  --bg-color: hsl(315, 99%, 77%);
+  display: inline-block;
+  color: var(--primary-color);
+  position: relative;
+}
+
+footer > p > .link {
+  --primary-color: hsl(211, 87%, 45%);
+  --bg-color: hsl(315, 99%, 37%);
+}
+
+.link:after {
+  content: '';
+  width: 100%;
+  height: 1px;
+  display: block;
+  position: absolute;
+  background: var(--bg-color);
+}
+
+.link:before {
+  content: '';
+  width: 100%;
+  height: 1px;
+  display: block;
+  background: var(--bg-color);
+  transition: .3s;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.link:hover {
+  --primary-color: hsl(211, 87%, 55%);
+  color: var(--primary-color);
+}
+
+.link:hover:after, .link:hover:before {
+  animation: .7s ease-out 1 slideBackground
+}
+
+@keyframes slideBackground {
+  from {
+    width: 100%;
+  }
+  25%, 75% {
+    width: 50%
+  }
+  50%{
+    width: 0
+  }
+  to {
+    width: 100%;
+  }
+}
+
 .description__container {
   width: var(--about-description-width);
   display: flex;
