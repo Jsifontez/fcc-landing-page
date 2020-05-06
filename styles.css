@@ -63,6 +63,7 @@ section:nth-child(odd) {
   justify-content: space-between;
   align-items: center;
   padding: 0 4em;
+  height: 100%;
 }
 
 #header-img {
@@ -277,7 +278,6 @@ footer > p > .link {
 
 .avatar__container {
   width: 30%;
-  height: 284px;
   margin-right: 1.25em; /*20px*/
   background-image: radial-gradient(circle at top right, var(--primary-color), var(--secondary-color) 90%);
   border-radius: 1.25em; /*20px*/
@@ -383,4 +383,45 @@ footer > p > .link {
   align-items: center;
   justify-content: center;
   font-size: .9em;
+}
+
+@media screen and (max-width: 1030px) {
+  :root {
+    --intro-width: 54%;
+    --about-description-width: 90%;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  :root {
+    --project-description-width: 80%;
+  }
+}
+
+@media screen and (max-width: 810px) {
+  :root {
+    --intro-width: 69%;
+  }
+
+  #signup > p {
+    width: 90%;
+  }
+
+  .description__container {
+    flex-direction: column;
+  }
+
+  .description {
+    width: 80%;
+  }
+
+  .avatar__container {
+    width: 40%;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  body {
+    grid-template-columns: 1fr
+  }
 }
