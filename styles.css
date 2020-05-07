@@ -425,3 +425,13 @@ footer > p > .link {
     grid-template-columns: 1fr
   }
 }
+
+@media screen and (max-width: 600px) {
+  .video__container {
+    width: 93%;
+  }
+
+  #video {
+    width: 100%;
+  }
+}
