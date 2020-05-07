@@ -160,10 +160,11 @@ a {
   background-clip: text;
   color: transparent;
   font-family: 'Bree Serif', serif;
+  text-align: center;
 }
 
 .project__description {
-  --font-size: 1.25em;
+  /*--font-size: 1.25em;*/
   max-width: var(--project-description-width);
   font-size: var(--font-size);
   text-align: justify;
@@ -228,24 +229,12 @@ footer > p > .link {
   background: var(--bg-color);
 }
 
-.link:before {
-  content: '';
-  width: 100%;
-  height: 1px;
-  display: block;
-  background: var(--bg-color);
-  transition: .3s;
-  position: absolute;
-  top: 0;
-  right: 0;
-}
-
 .link:hover {
   --primary-color: hsl(211, 87%, 55%);
   color: var(--primary-color);
 }
 
-.link:hover:after, .link:hover:before {
+.link:hover:after{
   animation: .7s ease-out 1 slideBackground
 }
 
@@ -268,7 +257,7 @@ footer > p > .link {
   width: var(--about-description-width);
   display: flex;
   align-items: center;
-  font-size: 1.15em;
+  font-size: var(--font-size);
 }
 
 .avatar {
@@ -333,28 +322,6 @@ footer > p > .link {
 #email::placeholder {
   font-weight: bold;
 }
-
-/*#email:invalid {
-  box-shadow: 1px 1px 10px red,
-              1px 1px 10px #e87815;
-  animation: .5s linear infinite alternate change_box_shadow;
-  border: none;
-}*/
-
-/*@keyframes change_box_shadow {
-  from {
-    box-shadow: 1px 1px 20px #e87815,
-              1px 1px 20px #ff3c00;
-  },
-  50% {
-    box-shadow: 1px 1px 20px #ff3c00,
-              1px 1px 20px #ff5400;
-  },
-  to {
-    box-shadow: 1px 1px 20px #ff7800,
-              1px 1px 20px #ffbf00;
-  }
-}*/
 
 #submit {
   cursor: pointer;
@@ -427,11 +394,54 @@ footer > p > .link {
 }
 
 @media screen and (max-width: 600px) {
+  :root {
+    --intro-width: 75%;
+    --title-font-size: 3em;
+    --subtitle-font-size: 2.2em;
+    --about-description-width: 85%;
+  }
+
+  #home > h3 {
+    font-size: 1.4em;
+  }
+
+  .description {
+    width: 90%;
+  }
+
   .video__container {
     width: 93%;
   }
 
   #video {
     width: 100%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  :root {
+    --font-size: 1.1em;
+    --title-font-size: 2.5em;
+  }
+
+  #home > h3 {
+    font-size: 1.1em;
+    text-align: center;
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  :root {
+    --title-font-size: 2.1em;
+    --subtitle-font-size: 1.9em;
+  }
+
+  #signup > p {
+    font-size: 1.1em;
+  }
+
+  #email {
+    width: 16em;
   }
 }
