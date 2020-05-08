@@ -66,8 +66,15 @@ section:nth-child(odd) {
   height: 100%;
 }
 
+#logo__container {
+  width: 30%;
+  height: 100%;
+}
+
 #header-img {
-  width: 6%;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 
@@ -90,6 +97,25 @@ section:nth-child(odd) {
 .nav-link:visited{
   --secondary-color: hsl(161, 100%, 80%);
   color: var(--secondary-color);
+}
+
+.burguer-button{
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  /*background: hsl(202.2, 28.7%, 31.4%);*/
+  cursor: pointer;
+  position: fixed;
+  top: 10px;
+  right: 20px;
+  z-index: 2;
+  display: none;
+}
+
+#layer_1 {
+  width: 30px;
+  height: 40px;
+  padding: 0 5px;
 }
 
 #home {
@@ -391,6 +417,9 @@ footer > p > .link {
   body {
     grid-template-columns: 1fr
   }
+  #logo__container {
+    width: 25%;
+  }
 }
 
 @media screen and (max-width: 600px) {
@@ -399,6 +428,24 @@ footer > p > .link {
     --title-font-size: 3em;
     --subtitle-font-size: 2.2em;
     --about-description-width: 85%;
+  }
+
+  #header {
+    --bg-color: hsl(315, 99%, 77%);
+    height: 40px;
+    top: 10px;
+    right: 20px;
+    width: 40px;
+    border-radius: 50%;
+    left: unset;
+  }
+
+  #nav-bar{
+    display: none;
+  }
+
+  .burguer-button{
+    display: block;
   }
 
   #home > h3 {
