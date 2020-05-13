@@ -37,7 +37,7 @@ body {
 }
 
 section {
-  padding-top: 50px;
+  padding-top: 30px;
   width: 100%;
 }
 
@@ -176,7 +176,6 @@ a {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 0 2%;
   box-sizing: border-box;
 }
 
@@ -376,6 +375,11 @@ footer > p > .link {
   align-items: center;
   justify-content: center;
   font-size: .9em;
+  padding: .5em 0;
+}
+
+#footer > p {
+  margin: .3em 0;
 }
 
 @media screen and (max-width: 1030px) {
@@ -428,6 +432,10 @@ footer > p > .link {
     --title-font-size: 3em;
     --subtitle-font-size: 2.2em;
     --about-description-width: 85%;
+  }
+
+  section {
+    padding-top: 15px;
   }
 
   #header {
