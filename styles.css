@@ -86,8 +86,9 @@ section:nth-child(odd) {
 
 .nav-link:hover {
   color: transparent;
-  background: linear-gradient(to left, var(--gradient-end), var(--gradient-start));
   background-clip: text;
+  -webkit-background-clip: text;
+  background: linear-gradient(to left, var(--gradient-end), var(--gradient-start));
 }
 
 .nav-link:focus, .nav-link:active{
@@ -134,9 +135,10 @@ section:nth-child(odd) {
 }
 
 .title__gradient {
-  background: linear-gradient(to right, var(--gradient-start), 40%,var(--gradient-end));
-  background-clip: text;
   color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  background: linear-gradient(to right, var(--gradient-start), 40%,var(--gradient-end));
 }
 
 #home > h3 {
@@ -180,12 +182,13 @@ a {
 }
 
 .subtitle {
+  text-align: center;
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  font-family: 'Bree Serif', serif;
   font-size: var(--subtitle-font-size);
   background: linear-gradient(to right, var(--gradient-start), 40%, var(--gradient-end));
-  background-clip: text;
-  color: transparent;
-  font-family: 'Bree Serif', serif;
-  text-align: center;
 }
 
 .project__description {
@@ -349,17 +352,18 @@ footer > p > .link {
 }
 
 #submit {
-  cursor: pointer;
-  margin-top: 1.5em;
   border: 0;
-  box-shadow: 0.2em .2em 0.6em #9b9b9b;
-  font-weight: bold;
-  border-radius: .8em;
-  background: linear-gradient(to bottom right, var(--primary-color) 35%, 50%, var(--secondary-color));
-  background-clip: text;
-  color: transparent;
   font-size: 1em;
   transition: .4s;
+  cursor: pointer;
+  margin-top: 1.5em;
+  font-weight: bold;
+  color: transparent;
+  border-radius: .8em;
+  background-clip: text;
+  -webkit-background-clip: text;
+  box-shadow: 0.2em .2em 0.6em #9b9b9b;
+  background: linear-gradient(to bottom right, var(--primary-color) 35%, 50%, var(--secondary-color));
 }
 
 #submit:hover {
