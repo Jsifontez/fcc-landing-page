@@ -432,6 +432,9 @@ footer > p > .link {
   #logo__container {
     width: 25%;
   }
+  .avatar__container {
+    width: 60%;
+  }
 }
 
 @media screen and (max-width: 600px) {
@@ -512,6 +515,7 @@ footer > p > .link {
   #video {
     width: 100%;
   }
+  
 }
 
 @media screen and (max-width: 500px) {
@@ -524,6 +528,11 @@ footer > p > .link {
     font-size: 1.1em;
     text-align: center;
     width: 80%;
+  }
+
+  .avatar__container {
+    width: 80%;
+    height: 30vh;
   }
 }
 
