@@ -289,15 +289,19 @@ footer > p > .link {
 }
 
 .avatar {
+  object-fit: cover;
   border-radius: 1.25em; /*20px*/
   mix-blend-mode: overlay;
+  object-position: center;
 }
 
 .avatar__container {
   width: 30%;
+  height: 35vh;
+  overflow: hidden;
   margin-right: 1.25em; /*20px*/
-  background-image: radial-gradient(circle at top right, var(--primary-color), var(--secondary-color) 90%);
   border-radius: 1.25em; /*20px*/
+  background-image: radial-gradient(circle at top right, var(--primary-color), var(--secondary-color) 90%);
 }
 
 .video__container {
